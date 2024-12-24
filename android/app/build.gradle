@@ -1,0 +1,45 @@
+plugins {
+    id "com.android.application"
+    id "kotlin-android"
+    // The Flutter Gradle Plugin must be applied after the Android and Kotlin Gradle plugins.
+    id "dev.flutter.flutter-gradle-plugin"
+}
+
+android {
+    namespace = "com.flipcard.flip_card" // Ensure this matches your package name
+    compileSdk = 34 // Use the specific compile SDK version instead of flutter.compileSdkVersion
+
+    ndkVersion = flutter.ndkVersion // This references the Flutter project's NDK version
+
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_1_8
+        targetCompatibility = JavaVersion.VERSION_1_8
+    }
+
+    kotlinOptions {
+        jvmTarget = "1.8" // Specify JVM target as a string
+    }
+
+    defaultConfig {
+        // Specify your unique Application ID
+        applicationId = "com.flipcard.flip_card" // Ensure this is unique
+
+        minSdk = 21 // Set your min SDK version (you can use flutter.minSdkVersion if defined)
+        targetSdk = 34 // Set your target SDK version (you can use flutter.targetSdkVersion if defined)
+        versionCode = 1 // Set your version code (increment as needed)
+        versionName = "1.0" // Set your version name (update as needed)
+    }
+
+    buildTypes {
+        release {
+            // Add your own signing config for release builds
+            signingConfig = signingConfigs.debug // Placeholder for debug signing
+            // Uncomment the following if you have a release signing configuration
+            // signingConfig = signingConfigs.release
+        }
+    }
+}
+
+flutter {
+    source = "../.." // Ensure this points to the correct Flutter project directory
+}

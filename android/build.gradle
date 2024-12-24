@@ -1,0 +1,32 @@
+buildscript {
+    repositories {
+        google()
+        mavenCentral()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:8.3.0'
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        mavenCentral()
+    }
+
+    // Set custom build directory for all projects
+    buildDir = "../build"
+}
+
+subprojects {
+    // Set custom build directory per subproject
+    project.buildDir = "${rootProject.buildDir}/${project.name}"
+
+    // Ensure that the evaluation of subprojects depends on the app module
+    evaluationDependsOn(":app")
+}
+
+// Define a clean task that deletes the build directory
+tasks.register("clean", Delete) {
+    delete rootProject.buildDir
+}
