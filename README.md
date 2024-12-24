@@ -1,18 +1,18 @@
-# flip_card
+# ThaiD Clone
 
-A new Flutter project.
+[ThaiD Clone](https://github.com/eagle-swifttech/thaiid) is a simple interactive web-based project designed to replicate the flipping and rotation features of a card-like interface. This project provides an intuitive way for users to interact with a card by flipping it front and back or toggling its orientation with clicks.
 
-## Getting Started
+## Features
 
-This project is a starting point for a Flutter application.
+1. **Single Click Interaction**  
+   - Flip the card to view the front or back.
 
-A few resources to get you started if this is your first Flutter project:
+2. **Double Click Interaction**  
+   - Toggle the card's orientation between vertical and horizontal.
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+## Installation
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
-# thaiod
-# ThaiD
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/eagle-swifttech/thaiid.git
+   cd thaiid
